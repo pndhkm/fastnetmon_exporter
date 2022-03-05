@@ -1,4 +1,4 @@
-module github.com/lwlcom/fastnetmon_exporter
+module github.com/pndhkm/fastnetmon_exporter
 
 go 1.17
 
