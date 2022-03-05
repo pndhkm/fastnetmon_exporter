@@ -24,7 +24,7 @@ host | show host_counters bytes (incoming|outgoing)
 
 ## Install
 ```bash
-go install -u github.com/lwlcom/fastnetmon_exporter
+go install -u github.com/lwlcom/fastnetmon_exporter@latest
 ```
 
 ## Usage
