@@ -1,4 +1,4 @@
-module github.com/czerwonk/junos_exporter
+module github.com/lwlcom/fastnetmon_exporter
 
 go 1.17
 
