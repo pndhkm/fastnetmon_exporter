@@ -9,7 +9,7 @@ import (
 	"github.com/lwlcom/fastnetmon_exporter/rpc"
 	"github.com/lwlcom/fastnetmon_exporter/totaltraffic"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/common/log"
+	log "github.com/sirupsen/logrus"
 )
 
 const prefix = "fastnetmon_"
@@ -50,6 +50,8 @@ func collectors() map[string]collector.RPCCollector {
 
 	return m
 }
+
+
 
 // Describe implements prometheus.Collector interface
 func (c *fastnetmonCollector) Describe(ch chan<- *prometheus.Desc) {
