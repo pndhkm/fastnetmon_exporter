@@ -79,7 +79,12 @@ func handleMetricsRequest(w http.ResponseWriter, r *http.Request) {
 	c := newFastnetmonCollector()
 	reg.MustRegister(c)
 
+
+	l := log.New()
+	l.Level = log.ErrorLevel
+
 	promhttp.HandlerFor(reg, promhttp.HandlerOpts{
 		ErrorLog:      log.NewErrorLogger(),
+		ErrorLog:      l,
 		ErrorHandling: promhttp.ContinueOnError}).ServeHTTP(w, r)
 }
